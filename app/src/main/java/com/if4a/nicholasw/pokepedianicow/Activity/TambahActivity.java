@@ -46,7 +46,7 @@ public class TambahActivity extends AppCompatActivity {
         etNamaEvo = findViewById(R.id.et_Evoname);
         btnSimpan = findViewById(R.id.btn_tambah);
 
-        btnSimpan = findViewById(R.id.btn_tambah);
+
 
         btnSimpan.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -3,20 +3,22 @@ package com.if4a.nicholasw.pokepedianicow.Model;
 import android.media.Image;
 
 public class ModelPokemon {
-    private String id, entry, name, type, ability, hp, atk, def, spa, spd, spe
+    private String id, name, entry, type, ability, hp, atk, def, spa, spd, spe
             , move1, move2, move3, move4, namaevo;
-    private Image pokemon, evo;
+
 
     public String getId() {
         return id;
     }
 
-    public String getEntry() {
-        return entry;
-    }
+
 
     public String getName() {
         return name;
+    }
+
+    public String getEntry() {
+        return entry;
     }
 
     public String getType() {
@@ -71,13 +73,7 @@ public class ModelPokemon {
         return namaevo;
     }
 
-    public Image getPokemon() {
-        return pokemon;
-    }
 
-    public Image getEvo() {
-        return evo;
-    }
 
 //    public String getId() {
 //        return id;

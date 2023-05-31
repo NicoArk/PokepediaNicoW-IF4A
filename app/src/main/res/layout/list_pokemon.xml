@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="6dp"
-        android:background="@color/purple_200"
+        android:background="@color/white"
 
         android:orientation="vertical">
 
@@ -26,7 +26,7 @@
 
         <ImageView
             android:id="@+id/iv_Pokemon"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Image pokemon"
@@ -34,7 +34,7 @@
 
         <TextView
             android:id="@+id/tv_name"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nama Pokemon"
@@ -55,7 +55,7 @@
 
         <TextView
             android:id="@+id/tv_type"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tipe Pokemon"
@@ -63,7 +63,7 @@
 
         <TextView
             android:id="@+id/tv_Ability"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ability Pokemon"
@@ -71,7 +71,7 @@
 
         <TextView
             android:id="@+id/tv_HP"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="HP Pokemon"
@@ -79,7 +79,7 @@
 
         <TextView
             android:id="@+id/tv_ATK"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ATK Pokemon"
@@ -87,7 +87,7 @@
 
         <TextView
             android:id="@+id/tv_DEF"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="DEF Pokemon"
@@ -95,7 +95,7 @@
 
         <TextView
             android:id="@+id/tv_SpA"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SpA Pokemon"
@@ -103,7 +103,7 @@
 
         <TextView
             android:id="@+id/tv_SpD"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SpD Pokemon"
@@ -111,7 +111,7 @@
 
         <TextView
             android:id="@+id/tv_SPE"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SPE Pokemon"
@@ -119,7 +119,7 @@
 
         <TextView
             android:id="@+id/tv_Move1"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Move1 Pokemon"
@@ -127,7 +127,7 @@
 
         <TextView
             android:id="@+id/tv_Move2"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Move2 Pokemon"
@@ -135,7 +135,7 @@
 
         <TextView
             android:id="@+id/tv_Move3"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Move3 Pokemon"
@@ -143,7 +143,7 @@
 
         <TextView
             android:id="@+id/tv_Move4"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Move4 Pokemon"
@@ -152,7 +152,7 @@
 
         <ImageView
             android:id="@+id/iv_Evo"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Evo Pokemon"

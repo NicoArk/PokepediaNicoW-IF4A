@@ -61,7 +61,8 @@ public class AdapterPokemon
         holder.tvATK.setText(MK.getAtk());
         holder.tvDEF.setText(MK.getDef());
         holder.tvSpA.setText(MK.getSpa());
-        holder.tvSpD.setText(MK.getSpe());
+        holder.tvSpD.setText(MK.getSpd());
+        holder.tvSPE.setText(MK.getSpe());
         holder.tvMove1.setText(MK.getMove1());
         holder.tvMove2.setText(MK.getMove2());
         holder.tvMove3.setText(MK.getMove3());
@@ -86,7 +87,7 @@ public class AdapterPokemon
 
             tvId = itemView.findViewById(R.id.tv_id);
             tvName = itemView.findViewById(R.id.tv_name);
-            tvEntry = itemView.findViewById(R.id.tv_name);
+            tvEntry = itemView.findViewById(R.id.tv_entry);
             tvType = itemView.findViewById(R.id.tv_type);
             tvAbility = itemView.findViewById(R.id.tv_Ability);
             tvHP = itemView.findViewById(R.id.tv_HP);

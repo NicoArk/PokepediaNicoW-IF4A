@@ -1,54 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_margin="6dp"
+    android:layout_height="wrap_content"
+    >
 
-
-    tools:context=".Activity.MainActivity">
-
-<!--    <pl.droidsonroids.gif.GifImageView-->
-<!--        android:id="@+id/gif_background2"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:background="@drawable/background2"-->
-<!--        ></pl.droidsonroids.gif.GifImageView>-->
-
-
-    <androidx.recyclerview.widget.RecyclerView
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/rv_kuliner"
-        tools:listitem="@layout/list_item_kuliner"
-
-        ></androidx.recyclerview.widget.RecyclerView>
+        android:layout_height="match_parent"
+        android:layout_margin="6dp"
 
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_tambah"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_margin="32dp"
-        android:src="@drawable/baseline_add_24"
-        app:tint="@null"/>
+        tools:context=".Activity.MainActivity">
 
-    <ProgressBar
-        android:id="@+id/pb_pokemon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:indeterminate="true"
-        android:visibility="gone"
-        ></ProgressBar>
-    <!--    <pl.droidsonroids.gif.GifImageView-->
-    <!--        android:id="@+id/gif_pusheen"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_below="@+id/rv_player"-->
-    <!--        android:background="@drawable/pusheen"-->
-    <!--        ></pl.droidsonroids.gif.GifImageView>-->
-</RelativeLayout>
+        <!--    <pl.droidsonroids.gif.GifImageView-->
+        <!--        android:id="@+id/gif_background2"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:background="@drawable/background2"-->
+        <!--        ></pl.droidsonroids.gif.GifImageView>-->
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rv_kuliner"
+            tools:listitem="@layout/list_pokemon"
+
+            ></androidx.recyclerview.widget.RecyclerView>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_tambah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="32dp"
+            android:src="@drawable/baseline_add_24"
+            app:tint="@null"/>
+
+        <ProgressBar
+            android:id="@+id/pb_pokemon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:visibility="gone"
+            ></ProgressBar>
+        <!--    <pl.droidsonroids.gif.GifImageView-->
+        <!--        android:id="@+id/gif_pusheen"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_below="@+id/rv_player"-->
+        <!--        android:background="@drawable/pusheen"-->
+        <!--        ></pl.droidsonroids.gif.GifImageView>-->
+    </RelativeLayout>
+</ScrollView>
