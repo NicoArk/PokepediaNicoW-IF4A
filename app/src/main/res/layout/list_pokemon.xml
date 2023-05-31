@@ -1,6 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:elevation="32dp">
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:background="@color/purple_200"
+
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_id"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID"
+            android:textSize="21sp"
+            android:visibility="gone"
+            android:textStyle="italic"/>
+
+        <ImageView
+            android:id="@+id/iv_Pokemon"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Image pokemon"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Pokemon"
+            android:textSize="21sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_entry"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="entry pokemon"
+            android:textSize="21sp"
+
+            android:textStyle="italic"/>
+
+
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipe Pokemon"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/tv_Ability"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ability Pokemon"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/tv_HP"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HP Pokemon"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/tv_ATK"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ATK Pokemon"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/tv_DEF"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DEF Pokemon"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/tv_SpA"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SpA Pokemon"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/tv_SpD"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SpD Pokemon"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/tv_SPE"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SPE Pokemon"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/tv_Move1"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Move1 Pokemon"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/tv_Move2"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Move2 Pokemon"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/tv_Move3"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Move3 Pokemon"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/tv_Move4"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Move4 Pokemon"
+            android:textSize="21sp" />
+
+
+        <ImageView
+            android:id="@+id/iv_Evo"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Evo Pokemon"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/tv_Evoname"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Evo"
+            android:textSize="21sp"
+
+            android:textStyle="italic"/>
+
+        <!--        <pl.droidsonroids.gif.GifImageView-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:background="@drawable/star"-->
+        <!--            ></pl.droidsonroids.gif.GifImageView>-->
+    </LinearLayout>
 </androidx.cardview.widget.CardView>

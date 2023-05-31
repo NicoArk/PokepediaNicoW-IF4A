@@ -1,9 +1,192 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<!-- untuk maksimum panjang wkwk   android:maxLength="20"-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="6dp"
+
     tools:context=".Activity.TambahActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tambah Data Kuliner:)"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="32dp"
+        />
+
+    <EditText
+        android:id="@+id/et_id"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ID"
+        android:textSize="21sp"
+        android:visibility="gone"
+        android:textStyle="italic"/>
+
+    <ImageView
+        android:id="@+id/iv_Pokemon"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Image pokemon"
+        android:textSize="21sp" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama Pokemon"
+        android:textSize="21sp"
+        android:textStyle="bold"/>
+
+
+    <EditText
+        android:id="@+id/et_entry"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="entry pokemon"
+        android:textSize="21sp"
+
+        android:textStyle="italic"/>
+
+
+
+    <EditText
+        android:id="@+id/et_type"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tipe Pokemon"
+        android:textSize="21sp" />
+
+    <EditText
+        android:id="@+id/et_Ability"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ability Pokemon"
+        android:textSize="21sp" />
+
+    <EditText
+        android:id="@+id/et_HP"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="HP Pokemon"
+        android:textSize="21sp" />
+
+    <EditText
+        android:id="@+id/et_ATK"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ATK Pokemon"
+        android:textSize="21sp" />
+
+    <EditText
+        android:id="@+id/et_DEF"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="DEF Pokemon"
+        android:textSize="21sp" />
+
+    <EditText
+        android:id="@+id/et_SpA"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="SpA Pokemon"
+        android:textSize="21sp" />
+
+    <EditText
+        android:id="@+id/et_SpD"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="SpD Pokemon"
+        android:textSize="21sp" />
+
+    <EditText
+        android:id="@+id/et_SPE"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="SPE Pokemon"
+        android:textSize="21sp" />
+
+    <EditText
+        android:id="@+id/et_Move1"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Move1 Pokemon"
+        android:textSize="21sp" />
+
+    <EditText
+        android:id="@+id/et_Move2"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Move2 Pokemon"
+        android:textSize="21sp" />
+
+    <EditText
+        android:id="@+id/et_Move3"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Move3 Pokemon"
+        android:textSize="21sp" />
+
+    <EditText
+        android:id="@+id/et_Move4"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Move4 Pokemon"
+        android:textSize="21sp" />
+
+
+    <ImageView
+        android:id="@+id/iv_Evo"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Evo Pokemon"
+        android:textSize="21sp" />
+
+    <EditText
+        android:id="@+id/et_Evoname"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="nama evo"
+        android:textSize="21sp" />
+
+    <Button
+        android:id="@+id/btn_tambah"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:text="Tambahkan!"
+        android:textSize="21sp"/>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        ></pl.droidsonroids.gif.GifImageView>
+
+</LinearLayout>
