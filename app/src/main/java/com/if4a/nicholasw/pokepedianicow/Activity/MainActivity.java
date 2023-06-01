@@ -28,9 +28,9 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity {
     private FloatingActionButton fabTambah;
     private ProgressBar pbPokemon;
-    private RecyclerView rvKuliner;
-    private RecyclerView.Adapter adKuliner;
-    private RecyclerView.LayoutManager lmKuliner;
+    private RecyclerView rvPokemon;
+    private RecyclerView.Adapter adPokemon;
+    private RecyclerView.LayoutManager lmPokemon;
     private List<ModelPokemon> listPokemon = new ArrayList<>();
 
 
@@ -39,10 +39,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        rvKuliner = findViewById(R.id.rv_kuliner);
+        rvPokemon = findViewById(R.id.rv_pokemon);
         pbPokemon= findViewById(R.id.pb_pokemon);
-        lmKuliner = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        rvKuliner.setLayoutManager(lmKuliner);
+        lmPokemon = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        rvPokemon.setLayoutManager(lmPokemon);
         fabTambah = findViewById(R.id.fab_tambah);
 
         fabTambah.setOnClickListener(new View.OnClickListener() {
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        retrieveKuliner();
+        retrievePokemon();
     }
     //        fabTambah = findViewById(R.id.fab_tambah);
 //        fabTambah.setOnClickListener(new View.OnClickListener() {
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
 //            }
 
 
-    public void retrieveKuliner()
+    public void retrievePokemon()
     {
         pbPokemon.setVisibility(View.VISIBLE);
         APIRequestData ARD = RetroServer.konekRetrofit().create(APIRequestData.class);
@@ -80,9 +80,9 @@ public class MainActivity extends AppCompatActivity {
                 String pesan = response.body().getPesan();
                 listPokemon = response.body().getData();
 
-                adKuliner = new AdapterPokemon(MainActivity.this, listPokemon);
-                rvKuliner.setAdapter(adKuliner);
-                adKuliner.notifyDataSetChanged();
+                adPokemon = new AdapterPokemon(MainActivity.this, listPokemon);
+                rvPokemon.setAdapter(adPokemon);
+                adPokemon.notifyDataSetChanged();
 
                 pbPokemon.setVisibility(View.GONE);
             }

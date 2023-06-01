@@ -133,13 +133,13 @@ public class TambahActivity extends AppCompatActivity {
 
 
                 else {
-                    tambahKuliner();
+                    tambahPokemon();
                 }
             }
         });
     }
 
-    private void tambahKuliner()
+    private void tambahPokemon()
     {
         APIRequestData ARD = RetroServer.konekRetrofit().create(APIRequestData.class);
         Call<ModelResponse> proses = ARD.ardCreate(name, entry, type, ability, hp, atk, def, spa,

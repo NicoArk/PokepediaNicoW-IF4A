@@ -171,16 +171,16 @@ public class UbahActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    ubahKuliner();
+                    ubahPokemon();
                 }
             }
         });
     }
 
-    private void ubahKuliner()
+    private void ubahPokemon()
     {
         APIRequestData ARD = RetroServer.konekRetrofit().create(APIRequestData.class);
-        Call<ModelResponse> proses = ARD.ardUpdate(yid, entry, name, type, ability, hp, atk, def,
+        Call<ModelResponse> proses = ARD.ardUpdate(yid, name, entry, type, ability, hp, atk, def,
                 spa, spd, spe
                 , move1, move2, move3, move4, namaevo);
 

@@ -11,11 +11,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.if4a.nicholasw.pokepedianicow.API.APIRequestData;
 import com.if4a.nicholasw.pokepedianicow.API.RetroServer;
+import com.if4a.nicholasw.pokepedianicow.Activity.DetailActivity;
 import com.if4a.nicholasw.pokepedianicow.Activity.MainActivity;
 import com.if4a.nicholasw.pokepedianicow.Activity.UbahActivity;
 import com.if4a.nicholasw.pokepedianicow.Model.ModelPokemon;
@@ -44,6 +46,7 @@ public class AdapterPokemon
     @Override
     public VHPokemon onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View varView = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_pokemon,
+
                 parent, false);
 
         return new VHPokemon(varView);
@@ -69,7 +72,47 @@ public class AdapterPokemon
         holder.tvMove4.setText(MK.getMove4());
         holder.tvNamaEvo.setText(MK.getNamaevo());
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+             
+                String Name = MK.getName();
+                String Entry = MK.getEntry();
+                String Type = MK.getType();
+                String Ability = MK.getAbility();
+                String HP = MK.getHp();
+                String ATK = MK.getAtk();
+                String DEF = MK.getDef();
+                String SpA = MK.getSpa();
+                String SpD = MK.getSpd();
+                String SPE = MK.getSpe();
+                String Move1 = MK.getMove1();
+                String Move2 = MK.getMove2();
+                String Move3 = MK.getMove3();
+                String Move4 = MK.getMove4();
+                String NamaEvo = MK.getNamaevo();
+
+                Intent intent = new Intent(holder.itemView.getContext(), DetailActivity.class);
+                intent.putExtra("varName", Name);
+                intent.putExtra("varEntry", Entry);
+                intent.putExtra("varType", Type);
+                intent.putExtra("varAbility", Ability);
+                intent.putExtra("varHp", HP);
+                intent.putExtra("varAtk", ATK);
+                intent.putExtra("varDef", DEF);
+                intent.putExtra("varSpa", SpA);
+                intent.putExtra("varSpd", SpD);
+                intent.putExtra("varSpe", SPE);
+                intent.putExtra("varMove1", Move1);
+                intent.putExtra("varMove2", Move2);
+                intent.putExtra("varMove3", Move3);
+                intent.putExtra("varMove4", Move4);
+                intent.putExtra("varNamaEvo", NamaEvo);
+                holder.itemView.getContext().startActivity(intent);
+            }
+        });
     }
+
 
     @Override
     public int getItemCount() {
@@ -101,8 +144,17 @@ public class AdapterPokemon
             tvMove3 = itemView.findViewById(R.id.tv_Move3);
             tvMove4 = itemView.findViewById(R.id.tv_Move4);
             tvNamaEvo = itemView.findViewById(R.id.tv_Evoname);
+            ivPokemon = itemView.findViewById(R.id.iv_Pokemon);
+            ivEvo = itemView.findViewById(R.id.iv_Evo);
 
 
+//            ivEvo.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Intent i = new Intent(Intent.ACTION_PICK,android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+//                    startActivityForResult(i, RESULT_LOAD_IMAGE);
+//                }
+//            });
 
 
             itemView.setOnLongClickListener(new View.OnLongClickListener() {
@@ -116,7 +168,7 @@ public class AdapterPokemon
                     pesan.setNegativeButton("Hapus", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            hapusKuliner(tvId.getText().toString());
+                            hapusPokemon(tvId.getText().toString());
                             dialog.dismiss();
                         }
                     });
@@ -148,9 +200,15 @@ public class AdapterPokemon
                     return false;
                 }
             });
+
         }
 
-        private void hapusKuliner(String idPokemon)
+//        private void chooseFotoPokemon()
+//        {
+//
+//        }
+
+        private void hapusPokemon(String idPokemon)
         {
             APIRequestData ARD = RetroServer.konekRetrofit().create(APIRequestData.class);
             Call<ModelResponse> proses = ARD.ardDelete(idPokemon);
@@ -162,7 +220,7 @@ public class AdapterPokemon
                     String pesan = response.body().getPesan();
 
                     Toast.makeText(ctx, "Kode: " + kode + ", Pesan: " + pesan, Toast.LENGTH_SHORT).show();
-                    ((MainActivity) ctx).retrieveKuliner();
+                    ((MainActivity) ctx).retrievePokemon();
                 }
 
                 @Override
