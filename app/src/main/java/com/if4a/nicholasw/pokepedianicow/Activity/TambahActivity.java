@@ -2,27 +2,35 @@ package com.if4a.nicholasw.pokepedianicow.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.if4a.nicholasw.pokepedianicow.API.APIRequestData;
 import com.if4a.nicholasw.pokepedianicow.API.RetroServer;
 import com.if4a.nicholasw.pokepedianicow.Model.ModelResponse;
 import com.if4a.nicholasw.pokepedianicow.R;
 
+import pl.droidsonroids.gif.GifImageButton;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class TambahActivity extends AppCompatActivity {
     private EditText etId, etName, etEntry, etType, etAbility, etHP, etATK, etDEF, etSpA, etSpD, etSPE,
-            etMove1, etMove2, etMove3, etMove4, etNamaEvo;
-    private Button btnSimpan;
+            etMove1, etMove2, etMove3, etMove4, etNamaEvo, etfotopokemon, etfotoevo;
+    private FloatingActionButton btnSimpan, btnHome;
+
+
     private String id, entry, name, type, ability, hp, atk, def, spa, spd, spe
-            , move1, move2, move3, move4, namaevo;
+            , move1, move2, move3, move4, namaevo, fotopokemon, fotoevo;
+
+    private ImageView ivPokemon, ivEvo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,10 +52,20 @@ public class TambahActivity extends AppCompatActivity {
         etMove3 = findViewById(R.id.et_Move3);
         etMove4 = findViewById(R.id.et_Move4);
         etNamaEvo = findViewById(R.id.et_Evoname);
+//        ivPokemon = findViewById(R.id.iv_Pokemon);
+//        ivEvo = findViewById(R.id.iv_Evo);
+        etfotopokemon = findViewById(R.id.et_fotopokemon);
+        etfotoevo = findViewById(R.id.et_fotoEvo);
         btnSimpan = findViewById(R.id.btn_tambah);
+        btnHome = findViewById(R.id.fab_hometambah);
 
 
-
+btnHome.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        startActivity(new Intent(TambahActivity.this, MainActivity.class));
+    }
+});
         btnSimpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,6 +86,8 @@ public class TambahActivity extends AppCompatActivity {
                 move3 = etMove3.getText().toString();
                 move4 = etMove4.getText().toString();
                 namaevo = etNamaEvo.getText().toString();
+                fotopokemon = etfotopokemon.getText().toString();
+                fotoevo = etfotoevo.getText().toString();
 
 
 
@@ -142,10 +162,12 @@ public class TambahActivity extends AppCompatActivity {
     private void tambahPokemon()
     {
         APIRequestData ARD = RetroServer.konekRetrofit().create(APIRequestData.class);
-        Call<ModelResponse> proses = ARD.ardCreate(name, entry, type, ability, hp, atk, def, spa,
+        Call<ModelResponse> proses = ARD.ardCreate(fotopokemon, name, entry, type, ability, hp,
+                atk, def,
+                spa,
                 spd,
                 spe
-                , move1, move2, move3, move4, namaevo);
+                , move1, move2, move3, move4, fotoevo, namaevo);
 
         proses.enqueue(new Callback<ModelResponse>() {
             @Override

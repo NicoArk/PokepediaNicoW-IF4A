@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    >
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/night"
+        android:scaleType="centerCrop" />
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="6dp"
+        android:layout_height="wrap_content"
+
 
 
         tools:context=".Activity.MainActivity">
@@ -26,24 +32,56 @@
         <!--        ></pl.droidsonroids.gif.GifImageView>-->
 
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/night"
+    >
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/rv_pokemon"
+
+            android:background="@drawable/psyduck"
+            ></pl.droidsonroids.gif.GifImageView>
+
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/rv_pokemon"
             tools:listitem="@layout/list_pokemon"
 
+
             ></androidx.recyclerview.widget.RecyclerView>
+   </LinearLayout>
 
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab_tambah"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_margin="32dp"
-            android:src="@drawable/baseline_add_24"
-            app:tint="@null"/>
+
+<!--        <pl.droidsonroids.gif.GifImageView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@drawable/psyduck"-->
+<!--            ></pl.droidsonroids.gif.GifImageView>-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Other views in the ConstraintLayout -->
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_tambah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="32dp"
+                android:src="@drawable/addpokemon"
+                app:maxImageSize="56dp"
+                app:tint="#D81E1E"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <ProgressBar
             android:id="@+id/pb_pokemon"
@@ -60,5 +98,8 @@
         <!--        android:layout_below="@+id/rv_player"-->
         <!--        android:background="@drawable/pusheen"-->
         <!--        ></pl.droidsonroids.gif.GifImageView>-->
+
+
     </RelativeLayout>
-</ScrollView>
+
+</FrameLayout>

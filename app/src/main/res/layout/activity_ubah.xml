@@ -1,208 +1,636 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-   android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     >
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_margin="6dp"
+        android:layout_height="wrap_content"
 
-        tools:context=".Activity.UbahActivity">
-
-        <Button
-            android:id="@+id/btn_ubah"
+        >
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginTop="16dp"
-            android:text="Ubah!"
-            android:textSize="21sp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ubah Data Pokemon"
-
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal"
-            android:layout_marginBottom="32dp"
-            />
-
-        <EditText
-            android:id="@+id/et_id"
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="ID"
-            android:textSize="21sp"
-            android:visibility="gone"
-            android:textStyle="italic"/>
-
-        <ImageView
-            android:id="@+id/iv_Pokemon"
-            android:textColor="@color/black"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Image pokemon"
-            android:textSize="21sp" />
-
-        <EditText
-            android:id="@+id/et_name"
-            android:textColor="@color/black"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Nama Pokemon"
-            android:textSize="21sp"
-            android:textStyle="bold"/>
-
-        <EditText
-            android:id="@+id/et_entry"
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="entry pokemon"
-            android:textSize="21sp"
-
-            android:textStyle="italic"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#0478BB"
+            android:scaleType="centerCrop"
+            android:scrollbars="vertical"
 
 
-        <EditText
-            android:id="@+id/et_type"
-            android:textColor="@color/black"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Tipe Pokemon"
-            android:textSize="21sp" />
+            tools:context=".Activity.UbahActivity">
 
-        <EditText
-            android:id="@+id/et_Ability"
-            android:textColor="@color/black"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Ability Pokemon"
-            android:textSize="21sp" />
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ashmisty">
 
-        <EditText
-            android:id="@+id/et_HP"
-            android:textColor="@color/black"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="HP Pokemon"
-            android:textSize="21sp" />
-
-        <EditText
-            android:id="@+id/et_ATK"
-            android:textColor="@color/black"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="ATK Pokemon"
-            android:textSize="21sp" />
-
-        <EditText
-            android:id="@+id/et_DEF"
-            android:textColor="@color/black"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="DEF Pokemon"
-            android:textSize="21sp" />
-
-        <EditText
-            android:id="@+id/et_SpA"
-            android:textColor="@color/black"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="SpA Pokemon"
-            android:textSize="21sp" />
-
-        <EditText
-            android:id="@+id/et_SpD"
-            android:textColor="@color/black"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="SpD Pokemon"
-            android:textSize="21sp" />
-
-        <EditText
-            android:id="@+id/et_SPE"
-            android:textColor="@color/black"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="SPE Pokemon"
-            android:textSize="21sp" />
-
-        <EditText
-            android:id="@+id/et_Move1"
-            android:textColor="@color/black"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Move1 Pokemon"
-            android:textSize="21sp" />
-
-        <EditText
-            android:id="@+id/et_Move2"
-            android:textColor="@color/black"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Move2 Pokemon"
-            android:textSize="21sp" />
-
-        <EditText
-            android:id="@+id/et_Move3"
-            android:textColor="@color/black"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Move3 Pokemon"
-            android:textSize="21sp" />
-
-        <EditText
-            android:id="@+id/et_Move4"
-            android:textColor="@color/black"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Move4 Pokemon"
-            android:textSize="21sp" />
+            </pl.droidsonroids.gif.GifImageView>
 
 
-        <ImageView
-            android:id="@+id/iv_Evo"
-            android:textColor="@color/black"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Evo Pokemon"
-            android:textSize="21sp" />
+            <FrameLayout
+                android:layout_width="415dp"
+                android:layout_height="100dp">
 
-        <EditText
-            android:id="@+id/et_Evoname"
-            android:textColor="@color/black"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="nama evo"
-            android:textSize="21sp" />
+                <pl.droidsonroids.gif.GifImageButton
+                    android:id="@+id/gif_eevee"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/eeveetransparan"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/fontbener"
+                    android:text="Ubahkan"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+            </FrameLayout>
+
+            <!--            <Button-->
+            <!--                android:id="@+id/btn_ubah"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="56dp"-->
+            <!--                android:layout_marginTop="16dp"-->
+            <!--                android:text="Ubah!"-->
+            <!--                android:textSize="21sp"/>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/pokeball"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+
+                    android:fontFamily="@font/fontbener"
+                    android:text="Pokemon Database"
+                    android:textColor="@color/white"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/et_id"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ID"
+                android:textSize="21sp"
+                android:visibility="gone"
+                android:textStyle="italic"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/url" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="horizontal"
 
 
 
-        <!--    <pl.droidsonroids.gif.GifImageView-->
-        <!--        android:layout_width="wrap_content"-->
-        <!--        android:layout_height="wrap_content"-->
-        <!--        android:background="@drawable/background"-->
-        <!--        ></pl.droidsonroids.gif.GifImageView>-->
-        <!--    <pl.droidsonroids.gif.GifImageView-->
-        <!--        android:layout_width="match_parent"-->
-        <!--        android:layout_height="wrap_content"-->
-        <!--        android:background="@drawable/pusheen"-->
-        <!--        ></pl.droidsonroids.gif.GifImageView>-->
+                        >
 
-        <!--    <pl.droidsonroids.gif.GifImageView-->
-        <!--        android:layout_width="match_parent"-->
-        <!--        android:layout_height="wrap_content"-->
-        <!--        android:background="@drawable/catto"-->
-        <!--        ></pl.droidsonroids.gif.GifImageView>-->
-    </LinearLayout>
+                        <EditText
+                            android:id="@+id/et_fotoubahPokemon"
+                            android:layout_width="wrap_content"
+                            android:fontFamily="@font/fontbener"
+
+
+                            style="@style/TextAppearance.AppCompat.Medium"
+                            android:layout_height="wrap_content"
+                            android:hint="Url foto Pokemon (png is recommended)"
+                            android:textColorHint="#F44336"
+                            android:textColor="#F44336"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/url" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="horizontal"
+
+                        >
+
+                        <EditText
+                            android:id="@+id/et_fotoubahEvo"
+                            android:layout_width="wrap_content"
+                            style="@style/TextAppearance.AppCompat.Medium"
+                            android:layout_height="wrap_content"
+                            android:hint="Url foto evolusi Pokemon (png is recommended)"
+                            android:fontFamily="@font/fontbener"
+                            android:textColorHint="#F44336"
+                            android:textColor="#F44336"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="2dp">
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Nama Pokemon"
+                    android:layout_marginLeft="10dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/fontbener"
+                    android:textSize="21sp"
+                    android:textColorHint="#F44336"
+                    android:textColor="#F44336"
+                    android:textStyle="bold"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="2dp">
+
+                <EditText
+                    android:id="@+id/et_entry"
+
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/fontbener"    android:background="@android:color/transparent"
+                    android:layout_height="50dp"
+                    android:hint="entry pokemon"
+                    android:textSize="21sp"
+                    android:textColorHint="#F44336"
+                    android:textColor="#F44336"
+                    android:textStyle="italic"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="2dp">
+
+                <EditText
+                    android:id="@+id/et_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Tipe Pokemon"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/fontbener"
+                    android:textColorHint="#F44336"
+                    android:textColor="#F44336"    android:background="@android:color/transparent"
+
+                    android:textSize="21sp"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="2dp">
+
+                <EditText
+                    android:id="@+id/et_Ability"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/fontbener"
+                    android:layout_marginLeft="10dp"
+                    android:hint="Ability Pokemon"
+                    android:textColorHint="#F44336"    android:background="@android:color/transparent"
+                    android:textColor="#F44336"
+                    android:textSize="21sp"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="horizontal"
+
+
+
+                        >
+
+                        <EditText
+                            android:id="@+id/et_HP"
+                            android:layout_width="wrap_content"
+                            android:textSize="12sp"
+                            android:layout_marginLeft="5dp"
+                            android:background="@android:color/transparent"
+                            android:layout_height="30dp"
+                            android:fontFamily="@font/fontbener"
+                            android:hint="HP Pokemon"
+                            android:textColorHint="#F44336"
+                            android:textColor="#F44336" />
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="horizontal"
+
+
+
+                        >
+
+                        <EditText
+                            android:id="@+id/et_ATK"
+                            android:layout_width="wrap_content"
+                            android:textSize="12sp"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/fontbener"
+                            android:background="@android:color/transparent"
+                            android:layout_height="30dp"
+                            android:hint="ATK Pokemon"
+                            android:textColorHint="#F44336"
+                            android:textColor="#F44336" />
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="horizontal"
+
+
+
+                        >
+
+
+                        <EditText
+                            android:id="@+id/et_DEF"
+                            android:layout_width="wrap_content"
+                            android:textSize="12sp"
+                            android:background="@android:color/transparent"
+                            android:layout_height="30dp"
+                            android:hint="DEF Pokemon"
+                            android:textColorHint="#F44336"
+                            android:textColor="#F44336"
+                            android:layout_marginLeft="2dp"
+                            android:fontFamily="@font/fontbener"
+                            />
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="horizontal"
+
+
+
+                        >
+
+                        <EditText
+                            android:id="@+id/et_SpA"
+                            android:layout_width="wrap_content"
+                            android:textSize="12sp"
+                            android:background="@android:color/transparent"
+                            android:layout_height="30dp"
+                            android:hint="SpA Pokemon"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/fontbener"
+                            android:textColorHint="#F44336"
+                            android:textColor="#F44336" />
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="horizontal"
+                        >
+
+
+                        <EditText
+                            android:id="@+id/et_SpD"
+                            android:layout_width="wrap_content"
+                            android:textSize="11sp"
+                            android:background="@android:color/transparent"
+                            android:layout_height="30dp"
+                            android:hint="SpD Pokemon"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/fontbener"
+                            android:textColorHint="#F44336"
+                            android:textColor="#F44336" />
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="horizontal"
+
+
+
+                        >
+
+                        <EditText
+                            android:id="@+id/et_SPE"
+                            android:layout_width="wrap_content"
+                            android:textSize="11sp"
+                            android:background="@android:color/transparent"
+                            android:layout_height="30dp"
+                            android:fontFamily="@font/fontbener"
+                            android:hint="SPE Pokemon"
+                            android:textColorHint="#F44336"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#F44336" />
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="2dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <EditText
+                        android:id="@+id/et_Move1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/fontbener"
+                        android:hint="Move1 Pokemon"
+                        android:textColorHint="#F44336"
+                        android:textColor="#F44336"
+                        android:textSize="21sp" />
+
+                    <EditText
+                        android:id="@+id/et_Move2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Move2 Pokemon"
+                        android:fontFamily="@font/fontbener"
+                        android:textColorHint="#F44336"
+                        android:textColor="#F44336"
+                        android:textSize="21sp" />
+
+                    <EditText
+                        android:id="@+id/et_Move3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/fontbener"
+                        android:textColorHint="#F44336"
+                        android:hint="Move3 Pokemon"
+                        android:textColor="#F44336"
+                        android:textSize="21sp" />
+
+                    <EditText
+                        android:id="@+id/et_Move4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/fontbener"
+                        android:textColorHint="#F44336"
+                        android:hint="Move4 Pokemon"
+                        android:textColor="#F44336"
+                        android:textSize="21sp" />
+
+
+
+
+
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="2dp"
+
+                >
+                <EditText
+                    android:id="@+id/et_Evoname"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textColorHint="#F44336"
+                    android:fontFamily="@font/fontbener"
+                    android:gravity="center"
+                    android:textColor="#F44336"
+
+
+                    android:background="@android:color/transparent"
+                    android:hint="Nama Evolusi Pokemon"
+                    android:textSize="21sp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                >
+                <ImageView
+                    android:layout_width="420dp"
+                    android:layout_height="400dp"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/landscapemysterydungeon"
+                    ></ImageView>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btn_ubah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    android:layout_margin="32dp"
+                    android:src="@drawable/addpokemon"
+                    app:maxImageSize="56dp"
+                    app:tint="#D81E1E" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
 
 </ScrollView>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_homeubah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="32dp"
+        android:src="@drawable/homepokemon"
+        app:maxImageSize="56dp"
+        app:tint="@null"/>
+</RelativeLayout>
+
+
+

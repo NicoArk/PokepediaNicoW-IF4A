@@ -17,6 +17,7 @@ public interface APIRequestData {
     @FormUrlEncoded
     @POST("create.php")
     Call<ModelResponse> ardCreate(
+            @Field("fotopokemon") String fotopokemon,
             @Field("name") String name,
             @Field("entry") String entry,
             @Field("type") String type,
@@ -31,7 +32,9 @@ public interface APIRequestData {
             @Field("move2") String move2,
             @Field("move3") String move3,
             @Field("move4") String move4,
+            @Field("fotoevo") String fotoevo,
             @Field("namaevo") String namaevo
+
 
     );
 
@@ -39,7 +42,7 @@ public interface APIRequestData {
     @POST("update.php")
     Call<ModelResponse> ardUpdate(
             @Field("id") String id,
-
+            @Field("fotopokemon") String fotopokemon,
             @Field("name") String name,
             @Field("entry") String entry,
             @Field("type") String type,
@@ -54,7 +57,7 @@ public interface APIRequestData {
             @Field("move2") String move2,
             @Field("move3") String move3,
             @Field("move4") String move4,
-
+            @Field("fotoevo") String fotoevo,
             @Field("namaevo") String namaevo
 
 
@@ -64,8 +67,5 @@ public interface APIRequestData {
     @POST("delete.php")
     Call<ModelResponse> ardDelete(
             @Field("id") String id
-
-
     );
 }
-

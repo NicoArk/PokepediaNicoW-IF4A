@@ -4,14 +4,17 @@ import android.media.Image;
 
 public class ModelPokemon {
     private String id, name, entry, type, ability, hp, atk, def, spa, spd, spe
-            , move1, move2, move3, move4, namaevo;
+            , move1, move2, move3, move4, namaevo, fotopokemon, fotoevo;
 
+
+    public ModelPokemon(String fotopokemon, String fotoevo) {
+        this.fotopokemon = fotopokemon;
+        this.fotoevo = fotoevo;
+    }
 
     public String getId() {
         return id;
     }
-
-
 
     public String getName() {
         return name;
@@ -73,23 +76,11 @@ public class ModelPokemon {
         return namaevo;
     }
 
+    public String getFotopokemon() {
+        return fotopokemon;
+    }
 
-
-//    public String getId() {
-//        return id;
-//    }
-//
-//    public String getNama() {
-//        return nama;
-//    }
-//
-//    public String getAsal() {
-//        return asal;
-//    }
-//
-//    public String getDeskripsi_singkat() {
-//        return deskripsi_singkat;
-//    }
-
-
+    public String getFotoevo() {
+        return fotoevo;
+    }
 }

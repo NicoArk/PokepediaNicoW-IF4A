@@ -11,7 +11,7 @@
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/night2"
+        android:background="@drawable/forest"
         />
 
     <LinearLayout
@@ -24,6 +24,24 @@
 <!--            android:layout_height="250dp"-->
 <!--            android:src="@drawable/fotobuku"-->
 <!--            android:layout_gravity="center_horizontal"/>-->
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/gif_forest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pikachurunning"
+
+            ></pl.droidsonroids.gif.GifImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pokepedia"
+            android:textColor="@color/white"
+            android:fontFamily="@font/fontbener"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"/>
 
         <ProgressBar
             android:layout_marginTop="24dp"
@@ -31,15 +49,15 @@
             android:layout_height="wrap_content"
             />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Loading, Please wait...."
-            android:textColor="@color/white"
-            android:gravity="center"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:layout_marginTop="30dp"/>
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Loading, Please wait...."-->
+<!--            android:textColor="@color/white"-->
+<!--            android:gravity="center"-->
+<!--            android:textSize="20dp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:layout_marginTop="30dp"/>-->
 
     </LinearLayout>
 

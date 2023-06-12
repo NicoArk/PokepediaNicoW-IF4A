@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.if4a.nicholasw.pokepedianicow.API.APIRequestData;
 import com.if4a.nicholasw.pokepedianicow.API.RetroServer;
 import com.if4a.nicholasw.pokepedianicow.Model.ModelResponse;
@@ -20,13 +21,15 @@ import retrofit2.Response;
 
 public class UbahActivity extends AppCompatActivity {
     private String yid, yentry, yname, ytype, yability, yhp, yatk, ydef, yspa, yspd, yspe
-            , ymove1, ymove2, ymove3, ymove4, ynamaevo;
+            , ymove1, ymove2, ymove3, ymove4, ynamaevo, yfotopokemon, yfotoevo;
 
-    private EditText etId, etName, etEntry, etType, etAbility, etHP, etATK, etDEF, etSpA, etSpD, etSPE,
-            etMove1, etMove2, etMove3, etMove4, etNamaEvo;
-    private Button btnUbah;
-    private String id, entry, name, type, ability, hp, atk, def, spa, spd, spe
-            , move1, move2, move3, move4, namaevo;
+    private EditText etId,
+    etFotoPokemon, etName, etEntry, etType, etAbility, etHP, etATK, etDEF, etSpA, etSpD,
+            etSPE,
+            etMove1, etMove2, etMove3, etMove4, etFotoEvo, etNamaEvo;
+    private FloatingActionButton btnUbah, btnHome;
+    private String id, fotopokemon, entry, name, type, ability, hp, atk, def, spa, spd, spe
+            , move1, move2, move3, move4, fotoevo, namaevo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,7 @@ public class UbahActivity extends AppCompatActivity {
 
         Intent ambil = getIntent();
         yid = ambil.getStringExtra("xId");
+        yfotopokemon = ambil.getStringExtra("xFotoPokemon");
         yname = ambil.getStringExtra("xName");
         yentry = ambil.getStringExtra("xEntry");
         ytype = ambil.getStringExtra("xType");
@@ -49,8 +53,10 @@ public class UbahActivity extends AppCompatActivity {
         ymove2 = ambil.getStringExtra("xMove2");
         ymove3 = ambil.getStringExtra("xMove3");
         ymove4 = ambil.getStringExtra("xMove4");
+        yfotoevo = ambil.getStringExtra("xFotoEvo");
         ynamaevo = ambil.getStringExtra("xEvoName");
 
+        etFotoPokemon = findViewById(R.id.et_fotoubahPokemon);
         etName = findViewById(R.id.et_name);
         etEntry = findViewById(R.id.et_entry);
         etType = findViewById(R.id.et_type);
@@ -65,10 +71,13 @@ public class UbahActivity extends AppCompatActivity {
         etMove2 = findViewById(R.id.et_Move2);
         etMove3 = findViewById(R.id.et_Move3);
         etMove4 = findViewById(R.id.et_Move4);
+        etFotoEvo = findViewById(R.id.et_fotoubahEvo);
         etNamaEvo = findViewById(R.id.et_Evoname);
         btnUbah = findViewById(R.id.btn_ubah);
+        btnHome = findViewById(R.id.fab_homeubah);
 
-        
+
+        etFotoPokemon.setText(yfotopokemon);
         etName.setText(yname);
         etEntry.setText(yentry);
         etType.setText(ytype);
@@ -83,17 +92,23 @@ public class UbahActivity extends AppCompatActivity {
         etMove2 . setText(ymove2);
         etMove3 . setText(ymove3);
         etMove4 . setText(ymove4);
+        etFotoEvo.setText(yfotoevo);
         etNamaEvo . setText(ynamaevo);
         
 
 
-
+btnHome.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        startActivity(new Intent(UbahActivity.this, MainActivity.class));
+    }
+});
 
         btnUbah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-
+                fotopokemon = etFotoPokemon.getText().toString();
                 name = etName.getText().toString();
                 entry = etEntry.getText().toString();
                 type = etType.getText().toString();
@@ -108,6 +123,7 @@ public class UbahActivity extends AppCompatActivity {
                 move2 = etMove2.getText().toString();
                 move3 = etMove3.getText().toString();
                 move4 = etMove4.getText().toString();
+                fotoevo = etFotoEvo.getText().toString();
                 namaevo = etNamaEvo.getText().toString();
 
 
@@ -180,9 +196,11 @@ public class UbahActivity extends AppCompatActivity {
     private void ubahPokemon()
     {
         APIRequestData ARD = RetroServer.konekRetrofit().create(APIRequestData.class);
-        Call<ModelResponse> proses = ARD.ardUpdate(yid, name, entry, type, ability, hp, atk, def,
+        Call<ModelResponse> proses = ARD.ardUpdate(yid, fotopokemon, name, entry, type, ability,
+                hp, atk,
+                def,
                 spa, spd, spe
-                , move1, move2, move3, move4, namaevo);
+                , move1, move2, move3, move4, fotoevo, namaevo);
 
         proses.enqueue(new Callback<ModelResponse>() {
             @Override
