@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".Activity.DetailActivity"
+    tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck"
+    >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/lapras"
+        ></pl.droidsonroids.gif.GifImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="6dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+            <ImageView
+                android:id="@+id/iv_pokemon"
+                android:layout_width="120dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="32dp"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:fontFamily="@font/fontbener"
+                android:text="Name" />
+
+
+            <ImageView
+                android:id="@+id/draw_panah"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="0dp"
+                android:layout_toRightOf="@id/tv_name"
+                android:src="@drawable/panah" />
+
+            <ImageView
+                android:id="@+id/iv_evo"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/black"
+                android:text="Evo Pokemon"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/tv_namaevo"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:padding="6dp"
+                android:fontFamily="@font/fontbener"
+                android:layout_toStartOf="@id/iv_evo"
+                android:layout_below="@id/iv_evo"
+                android:layout_alignParentEnd="true"
+                android:text="namaevo" />
+
+
+            <!--            </RelativeLayout>-->
+
+
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_textentry"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="155dp"
+            android:justificationMode="inter_word"
+            android:padding="6dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/fontbener"
+            android:text="Entry" />
+
+        <TextView
+            android:id="@+id/tv_entry"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:justificationMode="inter_word"
+            android:padding="6dp"
+            android:fontFamily="@font/fontbener"
+            android:text="entry" />
+
+        <TextView
+            android:id="@+id/tv_textType"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:justificationMode="inter_word"
+            android:padding="6dp"
+
+            android:textStyle="bold"
+            android:fontFamily="@font/fontbener"
+            android:text="Type"/>
+
+        <TextView
+            android:id="@+id/tv_type"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:justificationMode="inter_word"
+            android:padding="6dp"
+            android:textSize="15sp"
+            android:fontFamily="@font/fontbener"
+            android:text="type" />
+
+        <TextView
+            android:id="@+id/tv_textAbility"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:justificationMode="inter_word"
+            android:padding="6dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/fontbener"
+            android:text="Ability"/>
+
+        <TextView
+            android:id="@+id/tv_ability"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:justificationMode="inter_word"
+            android:padding="6dp"
+            android:fontFamily="@font/fontbener"
+            android:text="ability" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:cardCornerRadius="15dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+              
+                    android:orientation="horizontal"
+
+
+
+                    >
+                    <TextView
+                        android:id="@+id/tv_texthp"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/fontbener"
+                        android:justificationMode="inter_word"
+                        android:padding="6dp"
+                        android:textSize="15sp"
+                        android:text="hp" />
+
+                    <TextView
+                        android:id="@+id/tv_hp"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/fontbener"
+                        android:justificationMode="inter_word"
+                        android:padding="6dp"
+                        android:textSize="15sp"
+                        android:text="hp" />
+
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:cardCornerRadius="15dp"
+                app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+                android:orientation="horizontal"
+
+
+
+                >
+                <TextView
+                    android:id="@+id/tv_textatk"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/fontbener"
+                    android:justificationMode="inter_word"
+                    android:padding="6dp"
+                    android:textSize="15sp"
+                    android:text="atk" />
+
+
+                <TextView
+                android:id="@+id/tv_atk"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/fontbener"
+                android:justificationMode="inter_word"
+                android:padding="6dp"
+                    android:textSize="15sp"
+                android:text="atk" />
+
+            </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:cardCornerRadius="15dp"
+                app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+                android:orientation="horizontal"
+
+
+
+                >
+                <TextView
+                    android:id="@+id/tv_textdef"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/fontbener"
+                    android:justificationMode="inter_word"
+                    android:padding="6dp"
+                    android:textSize="15sp"
+                    android:text="def" />
+
+
+                <TextView
+                android:id="@+id/tv_def"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/fontbener"
+                android:justificationMode="inter_word"
+                android:padding="6dp"
+                android:textSize="15sp"
+                android:text="def" />
+
+
+            </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    
+                    android:orientation="horizontal"
+
+
+
+                    >
+                    <TextView
+                        android:id="@+id/tv_textspa"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/fontbener"
+                        android:justificationMode="inter_word"
+                        android:padding="6dp"
+                        android:textSize="15sp"
+                        android:text="spa" />
+
+                    <TextView
+                android:id="@+id/tv_spa"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/fontbener"
+                android:justificationMode="inter_word"
+                android:padding="6dp"
+                android:textSize="15sp"
+                android:text="spa" />
+
+
+                </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        
+                        android:orientation="horizontal"
+
+
+
+                        >
+                        <TextView
+                            android:id="@+id/tv_textspd"
+                            style="@style/TextAppearance.AppCompat.Medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/fontbener"
+                            android:justificationMode="inter_word"
+                            android:padding="6dp"
+                            android:textSize="15sp"
+                            android:text="spd" />
+
+                        <TextView
+                android:id="@+id/tv_spd"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/fontbener"
+                android:justificationMode="inter_word"
+                android:padding="6dp"
+                android:textSize="15sp"
+                android:text="spd" />
+
+
+                    </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            
+                            android:orientation="horizontal"
+
+
+
+                            >
+                            <TextView
+                                android:id="@+id/tv_textspe"
+                                style="@style/TextAppearance.AppCompat.Medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/fontbener"
+                                android:justificationMode="inter_word"
+                                android:padding="6dp"
+                                android:textSize="15sp"
+                                android:text="spe" />
+
+                            <TextView
+                android:id="@+id/tv_spe"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/fontbener"
+                android:justificationMode="inter_word"
+                android:padding="6dp"
+                android:textSize="15sp"
+                android:text="spe" />
+
+                        </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_textMove"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:justificationMode="inter_word"
+            android:padding="6dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/fontbener"
+            android:text="Moves"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            app:cardCornerRadius="16dp"
+            android:elevation="32dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/tv_move1"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/fontbener"
+                    android:layout_height="wrap_content"
+                    android:justificationMode="inter_word"
+                    android:padding="6dp"
+                    android:text="move1" />
+
+                <TextView
+                    android:id="@+id/tv_move2"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/fontbener"
+                    android:justificationMode="inter_word"
+                    android:padding="6dp"
+                    android:text="move2" />
+                <TextView
+                    android:id="@+id/tv_move3"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:justificationMode="inter_word"
+                    android:fontFamily="@font/fontbener"
+                    android:padding="6dp"
+                    android:text="move3" />
+                <TextView
+                    android:id="@+id/tv_move4"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/fontbener"
+                    android:justificationMode="inter_word"
+                    android:padding="6dp"
+                    android:text="move4" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <FrameLayout
+            android:layout_width="400dp"
+            android:layout_height="100dp">
+
+            <pl.droidsonroids.gif.GifImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/moltres"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:textSize="30sp"
+                android:fontFamily="@font/fontbener"
+                android:textColor="@color/white"
+                android:layout_gravity="center" />
+        </FrameLayout>
+<!--        <Button-->
+<!--            android:id="@+id/btn_back"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+
+<!--            android:text="back?"-->
+
+<!--            >-->
+
+
+
+
+    </LinearLayout>
+</RelativeLayout>
+
+
+
+</ScrollView>
